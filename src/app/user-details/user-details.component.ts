@@ -30,7 +30,13 @@ export class UserDetailsComponent implements OnInit {
         this.loadUser(userId);
     }
 
-    async loadUser(userId: number) {
-        this.user = await this.userService.getUser(userId);
+    loadUser(userId: number) {
+        this.userService.getUser(userId).subscribe({
+            next: (user) => this.user = user,
+            error: (err) => {
+                console.error('Error loading user:', err);
+                this.user = null;
+            }
+        });
     }
 }

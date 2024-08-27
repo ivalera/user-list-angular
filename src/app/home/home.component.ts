@@ -22,16 +22,21 @@ import { MatButtonModule } from '@angular/material/button';
 
 export class HomeComponent implements OnInit{
     usersList: User[] = [];
-    userServise: UserService = inject(UserService);
+    userServiсe: UserService = inject(UserService);
 	filteredUserList: User[] = [];
 
     ngOnInit() {
         this.loadUsers();
     }
     
-    async loadUsers() {
-        this.usersList = await this.userServise.getUsers();
-		this.filteredUserList = this.usersList;
+    loadUsers() {
+        this.userServiсe.getUsers().subscribe({
+            next: (users) => {
+                this.usersList = users;
+                this.filteredUserList = users;
+            },
+            error: (err) => console.error('Error loading users:', err)
+        });
     }
 
 	filterResults(event: Event, text: string) {
