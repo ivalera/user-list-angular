@@ -1,0 +1,19 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 16px; 
+    margin: 16px; 
+    padding: 16px;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+} 
+.search-input {
+    flex: 1;
+}
+.button-group {
+    display: flex;
+    gap: 8px;
+} 
+button {
+    min-width: 100px;
+}

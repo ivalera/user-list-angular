@@ -1,0 +1,54 @@
+.user-details-card {
+    max-width: 600px;
+    margin: 24px auto;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+mat-card-header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 16px;
+    border-radius: 4px 4px 0 0;
+}
+.user-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+mat-card-subtitle {
+    font-size: 16px;
+    color: #c5cae9;
+}
+mat-card-content {
+    padding: 16px 0;
+}
+mat-list-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+mat-list-item h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 16px 0 0;
+    width: 100px;
+}
+mat-list-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1;
+    word-wrap: break-word;
+}
+mat-divider {
+    margin: 16px 0;
+}
+h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #3f51b5;
+}

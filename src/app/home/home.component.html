@@ -1,0 +1,16 @@
+<section>
+    <form (submit)="filterResults($event, filter.value)" class="search-form">
+        <mat-form-field appearance="fill" class="search-input">
+            <mat-label>Filter by name</mat-label>
+            <input matInput placeholder="Name" #filter>
+        </mat-form-field>
+        <div class="button-group">
+            <button mat-raised-button color="primary" type="submit">Search</button>
+            <button mat-stroked-button color="accent" type="button" (click)="resetFilter(filter)">Reset</button>
+        </div>
+    </form>
+</section>
+
+<section class="results">
+    <app-user-list [usersList]="filteredUserList"></app-user-list>
+</section>
